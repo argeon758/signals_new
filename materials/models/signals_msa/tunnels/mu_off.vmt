@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/signals_msa/tunnels/mu_off"
+    "$bumpmap"     "models/signals_msa/tunnels/mu_off_n"
+
+	"$model" "1"
+
+	"$phong" "1"
+	"$phongexponenttexture"	"models/signals_msa/tunnels/mu_off_pe"
+	"$phongexponent" "50"
+	"$phongboost"				0.5
+	"$phongfresnelranges"		"[.1 .1 .1]"
+	
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" 1
+	"$envmaptint" "1"
+}
