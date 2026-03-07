@@ -128,7 +128,7 @@ ENT.BasePos[0] = Vector(0,0,0)
 ENT.RenderOffset[0] = Vector(-93.5, 0, 110)
 ENT.TrafficLightModels[0] = {
 	m1	= "models/signals_msa/tunnels/dtm_support.mdl",
-	dtm	= "models/signals_msa/tunnels/dtm_tunnel.mdl",
+	--dtm	= "models/signals_msa/tunnels/dtm_tunnel.mdl",
 	m2	= "models/signals_msa/tunnels/pole.mdl",
 	m2_long =  "models/signals_msa/tunnels/pole_long.mdl",
 	m2_long_pos = Vector(0,0,21),
@@ -396,10 +396,11 @@ ENT.TrafficLightModels[4] = {
 Metrostroi.SigTypeNames[5] = 'Virus New'
 Metrostroi.SigTypeSpriteMul[5] = 1
 ENT.BasePos[5] = Vector(0,0,0)
-ENT.RenderOffset[5] = Vector(-93.6, 0, 108)
+ENT.RenderOffset[5] = Vector(-93.6, 0, 115)
 ENT.TrafficLightModels[5] = {
 	m1	= "models/signals_msa/tunnels/dtm_support.mdl",
-	dtm = "models/signals_msa/tunnels/dtm_tunnel.mdl",
+	--dtm = "models/signals_msa/tunnels/dtm_tunnel.mdl",
+	--dtm = "models/signals_msa/tunnels/dtm_tunnel.mdl",
 	m2	= "models/signals_msa/tunnels/pole.mdl",
 	m2_long =  "models/signals_msa/tunnels/pole_long.mdl",
 	m2_long_pos = Vector(0,0,46),
@@ -411,13 +412,13 @@ ENT.TrafficLightModels[5] = {
 	step = Vector(0,0,10.75),
 	boxname = Vector(13.5,40,52.25),
 	stationboxoffset = Vector(13,38,50),
-	single	= { Vector(0,0,24), "models/signals_msa/tunnels/light_single_2.mdl", {
+	single	= { Vector(0,0,24), "models/signals_msa/tunnels/light_single.mdl", {
 				[0] = Vector(0,-28.85,7.9),--
 				["glass"]	= {
 					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,3,7.9)},
 				}
 			}},
-	[0]	= { Vector(20,0,24), "models/signals_msa/tunnels/light_1_2.mdl", {
+	[0]	= { Vector(20,0,24), "models/signals_msa/tunnels/light_1.mdl", {
 				[0] = Vector(0,-28.85,7.9),--
 				["glass"]	= {
 					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,3,7.9)},
@@ -427,7 +428,7 @@ ENT.TrafficLightModels[5] = {
 					{"models/signals_msa/tunnels/kron_mirror.mdl", Vector(0,0,0),1,left = true, short = true},
 				},	
 			}},
-	X	= { Vector(0,0,46), "models/signals_msa/tunnels/light_1_2.mdl", {
+	X	= { Vector(0,0,46), "models/signals_msa/tunnels/light_1.mdl", {
 			[0] = Vector(7.22,-29.56,12.93),---27.54
 			["glass"]	= {
 				{"models/signals_msa/tunnels/zag_newt.mdl",Vector(0,0,0)},

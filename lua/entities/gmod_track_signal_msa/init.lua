@@ -309,11 +309,11 @@ function ENT:PostInitalize()
 		self.GoodInvationSignal = -1
 	end
 	if self.Left and (self.SignalType != 4 and self.SignalType != 3 and self.SignalType != 6) then
-		self:SetModel("models/metrostroi_train/81-717/buttons_pam/pam_0.mdl")
+		self:SetModel("models/signals_msa/tunnels/dtm_tunnel.mdl")
 	elseif self.SignalType == 4 or self.SignalType == 3 or self.SignalType == 6 then
 		self:SetModel("models/metrostroi_train/81-717/buttons_pam/pam_0.mdl")
 	else
-		self:SetModel("models/metrostroi_train/81-717/buttons_pam/pam_0.mdl")
+		self:SetModel("models/signals_msa/tunnels/dtm_tunnel.mdl")
 	end
 	self.PostInitalized = false
 
