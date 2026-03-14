@@ -125,6 +125,7 @@ Metrostroi.SigTypeSpriteMul = {}
 Metrostroi.SigTypeNames[0] = 'Inside'
 Metrostroi.SigTypeSpriteMul[0] = 1
 ENT.BasePos[0] = Vector(0,0,0)
+ENT.AutostopModel[0] = {"models/metrostroi/signals/mus/autostop.mdl", Vector(-70,80,0)}
 ENT.RenderOffset[0] = Vector(-93.5, 0, 110)
 ENT.TrafficLightModels[0] = {
 	m1	= "models/signals_msa/tunnels/dtm_support.mdl",
@@ -213,6 +214,7 @@ local SpecialLensConfig = {
 Metrostroi.SigTypeNames[1] = 'Outside'
 Metrostroi.SigTypeSpriteMul[1] = 0.75
 ENT.BasePos[1] = Vector(0,0,0)
+ENT.AutostopModel[1] = {"models/metrostroi/signals/mus/autostop.mdl", Vector(-70,80,0)}
 ENT.RenderOffset[1] = Vector(-100,-3,180)
 ENT.LongThreshold[1] = 1
 ENT.TrafficLightModels[1] = {
@@ -220,7 +222,7 @@ ENT.TrafficLightModels[1] = {
 	dtm	= "models/signals_msa/tunnels/dtm_tunnel.mdl",
 	["m2"]	= "models/mp_signals/mp_signals_outside_pole1.mdl",
 	name	= Vector(0,3,30),
-	boxname = Vector(13,34,36.5),
+	boxname = Vector(23,19.5,50),
 	boxnamestart = Vector(13,34,36.5),
 	stationboxoffset = Vector(13,38,50),
 	[1]	= { Vector(0,0,55), "models/signals_msa/outdoors/light2.mdl", {
@@ -267,6 +269,7 @@ ENT.TrafficLightModels[1] = {
 Metrostroi.SigTypeNames[2] = 'Outside box'
 Metrostroi.SigTypeSpriteMul[2] = 0.75
 ENT.BasePos[2] = Vector(0,0,0)
+ENT.AutostopModel[2] = {"models/metrostroi/signals/mus/autostop.mdl", Vector(-70,80,0)}
 ENT.RenderOffset[2] = Vector(-100, 0.85, 105)
 ENT.LongThreshold[2] = 1
 ENT.TrafficLightModels[2] = {
@@ -275,7 +278,7 @@ ENT.TrafficLightModels[2] = {
 	m2_long =  "models/signals_msa/tunnels/pole_long.mdl",
 	["name"]	= Vector(-3,2.5,7),
 	name_one	= Vector(10.07,0.5,3),
-	boxname = Vector(13,34,36.5),
+	boxname = Vector(23,19.5,50),
 	stationboxoffset = Vector(13,38,50),
 	[1]	= { Vector(0,0,42), "models/metrostroi/signals/mus/light_outside2_2.mdl", {
 				[0] = Vector(10.07,-29.7,27.55),
@@ -333,6 +336,7 @@ ENT.TrafficLightModels[2] = {
 Metrostroi.SigTypeNames[3] = 'Dwarf'
 Metrostroi.SigTypeSpriteMul[3] = 0.75
 ENT.BasePos[3] = Vector(0,0,0)
+ENT.AutostopModel[3] = {"models/metrostroi/signals/mus/autostop.mdl", Vector(-70,-35,0)}
 ENT.RenderOffset[3] = Vector(-100,0,-8)
 ENT.TrafficLightModels[3] = {
 	name	= Vector(0,9,27),
@@ -396,7 +400,8 @@ ENT.TrafficLightModels[4] = {
 Metrostroi.SigTypeNames[5] = 'Virus New'
 Metrostroi.SigTypeSpriteMul[5] = 1
 ENT.BasePos[5] = Vector(0,0,0)
-ENT.RenderOffset[5] = Vector(-93.6, 0, 115)
+ENT.AutostopModel[5] = {"models/metrostroi/signals/mus/autostop.mdl", Vector(-70,80,0)}
+ENT.RenderOffset[5] = Vector(-93.6, 0, 108)
 ENT.TrafficLightModels[5] = {
 	m1	= "models/signals_msa/tunnels/dtm_support.mdl",
 	--dtm = "models/signals_msa/tunnels/dtm_tunnel.mdl",
@@ -410,25 +415,31 @@ ENT.TrafficLightModels[5] = {
 	noleft = false,
 	kronOff = Vector(0,0,13),
 	step = Vector(0,0,10.75),
-	boxname = Vector(13.5,40,52.25),
+	boxname = Vector(23,19.5,50),
 	stationboxoffset = Vector(13,38,50),
-	single	= { Vector(0,0,24), "models/signals_msa/tunnels/light_single.mdl", {
+	single	= { Vector(0,0,24), "models/signals_msa/tunnels/light_single_2.mdl", {
 				[0] = Vector(0,-28.85,7.9),--
 				["glass"]	= {
-					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,3,7.9)},
-				}
+					{"models/metrostroi/signals/mus/lamp_lens.mdl",Vector(0,4,7.8), 0.9},
+				},
+				["cap"]	= {
+					{"models/signals_msa/tunnels/cap.mdl",Vector(0,0,0)},
+				},
 			}},
-	[0]	= { Vector(20,0,24), "models/signals_msa/tunnels/light_1.mdl", {
+	[0]	= { Vector(20,0,24), "models/signals_msa/tunnels/light_1_2.mdl", {
 				[0] = Vector(0,-28.85,7.9),--
 				["glass"]	= {
-					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,3,7.9)},
+					{"models/metrostroi/signals/mus/lamp_lens.mdl",Vector(0,4,7.8), 0.9},
 				},
 				["kron"] = {
 					{"models/signals_msa/tunnels/kron.mdl", Vector(0,0,0),1,right = true, short = true},
 					{"models/signals_msa/tunnels/kron_mirror.mdl", Vector(0,0,0),1,left = true, short = true},
+				},
+				["cap"]	= {
+					{"models/signals_msa/tunnels/cap.mdl",Vector(0,0,0)},
 				},	
 			}},
-	X	= { Vector(0,0,46), "models/signals_msa/tunnels/light_1.mdl", {
+	X	= { Vector(0,0,46), "models/signals_msa/tunnels/light_1_2.mdl", {
 			[0] = Vector(7.22,-29.56,12.93),---27.54
 			["glass"]	= {
 				{"models/signals_msa/tunnels/zag_newt.mdl",Vector(0,0,0)},
@@ -436,8 +447,6 @@ ENT.TrafficLightModels[5] = {
 			["kron"] = {
 					{"models/signals_msa/tunnels/kron.mdl", Vector(0,0,0),1,right = true, short = true},
 					{"models/signals_msa/tunnels/kron_mirror.mdl", Vector(0,0,0),1,left = true, short = true},
-					{"models/signals_msa/tunnels/kron_l.mdl", Vector(0,0,0),1,right = true, long = true},
-					{"models/signals_msa/tunnels/kron_l_mirror.mdl", Vector(0,0,0),1,left = true, long = true},
 			},	
 		}
 	},
@@ -445,6 +454,9 @@ ENT.TrafficLightModels[5] = {
 		["kron"] = {
 			{"models/signals_msa/tunnels/kron.mdl", Vector(0,0,0),1,right = true, short = true},
 			{"models/signals_msa/tunnels/kron_mirror.mdl", Vector(0,0,0),1,left = true, short = true},
+		},
+		["cap"]	= {
+					{"models/signals_msa/tunnels/cap.mdl",Vector(0,0,0)},
 		},
 	}, Vector(1.85, 2.7, 9.5), 0.525, 0.525, 0.125},
 	M_double = { Vector(0,0,24.5), "models/signals_msa/tunnels/path_ind_double.mdl", {}, Vector(13.1,2, 19.5), 1.75, 2.05, 4},
@@ -456,6 +468,7 @@ ENT.TrafficLightModels[5] = {
 Metrostroi.SigTypeNames[6] = 'Dwarf SPB'
 Metrostroi.SigTypeSpriteMul[6] = 0.75
 ENT.BasePos[6] = Vector(0,0,0)
+ENT.AutostopModel[6] = {"models/metrostroi/signals/mus/autostop.mdl", Vector(-70,35,0)}
 ENT.RenderOffset[6] = Vector(-95,0,-8)
 ENT.TrafficLightModels[6] = {
 	name	= Vector(0,9.356,106.5),

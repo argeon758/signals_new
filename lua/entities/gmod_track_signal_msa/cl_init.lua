@@ -398,8 +398,9 @@ function ENT:CreateModels()
         end
         if self.AutostopPresent then
             if not IsValid(self.Models[1]["autostop"]) then
-                self.Models[1]["autostop"] = ClientsideModel(self.AutostopModel[1],RENDERGROUP_OPAQUE)
-                self.Models[1]["autostop"]:SetPos(self:LocalToWorld(self.BasePos[self.LightType]+self.AutostopModel[2]))
+                local pos = self.BasePos[self.LightType]+self.AutostopModel[self.LightType][2]
+                self.Models[1]["autostop"] = ClientsideModel(self.AutostopModel[self.LightType][1],RENDERGROUP_OPAQUE)
+                self.Models[1]["autostop"]:SetPos(self:LocalToWorld(pos))
                 self.Models[1]["autostop"]:SetAngles(self:GetAngles())
                 self.Models[1]["autostop"]:SetParent(self)
             end
@@ -535,11 +536,11 @@ function ENT:CreateModels()
             self:SpawnLetter(i,TLM.SignLetter.model,offset - Vector(0,0,id*TLM.SignLetter.z),Format("s%d",math.min(3,#self.Name:match("(/+)$"))))
         end
         OffBoxName = TLM.boxname or Vector(0,0,0)
-        OffBoxNameStart = TLM.boxnamestart or Vector(0,0,0)
+        OffBoxNameStart = TLM.boxnamestart or Vector(23.7,-3.5,50)
         if self.BoxName == nil then self.BoxName = "" end
         if self.BoxNameStart == nil then self.BoxNameStart = "" end
         LeftLengOffBNE = Vector(#self.BoxName*4.55,0,0)
-        LeftLengOffBNS = Vector(9.1,0,0)
+        LeftLengOffBNS = Vector(-11.5,0,0)
         local safe_angle = Angle(0, 0, 0)
         if angle and type(angle) == "Angle" then
             safe_angle = angle
@@ -557,7 +558,7 @@ function ENT:CreateModels()
                     if not self.Left then
                         pos = OffBoxName - Vector(i * 4.55, 0, 0)
                     elseif self.Left then 
-                        pos = OffBoxName - Vector(-188.5 + i * 4.55, -1, 0) + LeftLengOffBNE
+                        pos = OffBoxName - Vector(-169 + i * 4.55, 0, 0) + LeftLengOffBNE
                     end
                 end
                 self:SpawnBoxNumbers(
