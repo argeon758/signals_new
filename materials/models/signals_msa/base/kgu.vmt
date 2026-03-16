@@ -1,1 +1,1 @@
-"VertexlitGeneric"{	"$basetexture" "models/signals_msa/base/kgu"}
+"VertexLitGeneric"{	"$basetexture" "models/signals_msa/base/kgu"    "$bumpmap"     "models/signals_msa/base/kgu_n"	"$model" "1"	"$phong" "1"	"$phongexponenttexture"	"models/signals_msa/base/kgu_pe"	"$phongexponent" "50"	"$phongboost"				0.5	"$phongfresnelranges"		"[.1 .1 .1]"		"$envmap" "env_cubemap"	"$normalmapalphaenvmapmask" 1	"$envmaptint" "1"}
