@@ -202,12 +202,12 @@ ENT.TrafficLightModels[0] = {
 -- Outside
 --------------------------------------------------------------------------------
 local SpecialLensConfig = {
-    Vector(0,0,35),
-    "models/signals_msa/outdoors/light1.mdl",
+    Vector(0,0,45),
+    "models/signals_msa/outdoors/light1_big.mdl",
     {
-        [0] = Vector(0,0.5,9.4),
+        [0] = Vector(0,2,13),
         ["glass"] = {
-            {"models/metrostroi/scb/signals/lamp_lens.mdl", Vector(0,33,9.4 ), 1.2},
+            {"models/metrostroi/scb/signals/lamp_lens.mdl", Vector(0,34,13), 1.5},
         }
     }
 }
@@ -215,32 +215,32 @@ Metrostroi.SigTypeNames[1] = 'Outside'
 Metrostroi.SigTypeSpriteMul[1] = 0.75
 ENT.BasePos[1] = Vector(0,0,0)
 ENT.AutostopModel[1] = {"models/metrostroi/signals/mus/autostop.mdl", Vector(-70,80,0)}
-ENT.RenderOffset[1] = Vector(-100,-3,180)
+ENT.RenderOffset[1] = Vector(-100,-3,280)
 ENT.LongThreshold[1] = 1
 ENT.TrafficLightModels[1] = {
 	["m1"]	= "models/signals_msa/tunnels/dtm_support.mdl",
 	dtm	= "models/signals_msa/tunnels/dtm_tunnel.mdl",
-	["m2"]	= "models/mp_signals/mp_signals_outside_pole1.mdl",
+	["m2"]	= "models/mp_signals/mp_signals_outside_pole2.mdl",
 	name	= Vector(0,3,30),
 	boxname = Vector(23,19.5,50),
 	boxnamestart = Vector(13,34,36.5),
 	stationboxoffset = Vector(13,38,50),
-	[1]	= { Vector(0,0,55), "models/signals_msa/outdoors/light2.mdl", {
-				[0] = Vector(0,0.5,23.4),
-				[1] = Vector(0,0.5,9.4),
+	[1]	= { Vector(0,0,65), "models/signals_msa/outdoors/light2_big.mdl", {
+				[0] = Vector(0,2,28),
+				[1] = Vector(0,2,13),
 				["glass"]	= {
-					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,33,23.4), 1.2},
-					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,33,9.4 ), 1.2},
+					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,34,28), 1.5},
+					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,34,13), 1.5},
 				}
 				}},
-	[2]	= { Vector(0,0,56), "models/signals_msa/outdoors/light3.mdl", {
-				[0] = Vector(0,0.5,37.4),
-				[1] = Vector(0,0.5,23.4),
-				[2] = Vector(0,0.5,9.4),
+	[2]	= { Vector(0,0,95), "models/signals_msa/outdoors/light3_big.mdl", {
+				[0] = Vector(0,2,42.5),
+				[1] = Vector(0,2,28),
+				[2] = Vector(0,2,13),
 				["glass"]	= {
-					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,33,37.4), 1.2},
-					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,33,23.4), 1.2},
-					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,33,9.4 ), 1.2},
+					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,34,42.5), 1.5},
+					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,34,28), 1.5},
+					{"models/metrostroi/scb/signals/lamp_lens.mdl",Vector(0,34,13), 1.5},
 				}
 				} },
 	X_glasses	= {
@@ -417,16 +417,13 @@ ENT.TrafficLightModels[5] = {
 	step = Vector(0,0,10.75),
 	boxname = Vector(23,19.5,50),
 	stationboxoffset = Vector(13,38,50),
-	single	= { Vector(0,0,24), "models/signals_msa/tunnels/light_single_2.mdl", {
+	single	= { Vector(0,0,24), "models/signals_msa/tunnels/light_single.mdl", {
 				[0] = Vector(0,-28.85,7.9),--
 				["glass"]	= {
 					{"models/metrostroi/signals/mus/lamp_lens.mdl",Vector(0,4,7.8), 0.9},
 				},
-				["cap"]	= {
-					{"models/signals_msa/tunnels/cap.mdl",Vector(0,0,0)},
-				},
 			}},
-	[0]	= { Vector(20,0,24), "models/signals_msa/tunnels/light_1_2.mdl", {
+	[0]	= { Vector(20,0,24), "models/signals_msa/tunnels/light_1.mdl", {
 				[0] = Vector(0,-28.85,7.9),--
 				["glass"]	= {
 					{"models/metrostroi/signals/mus/lamp_lens.mdl",Vector(0,4,7.8), 0.9},
@@ -434,12 +431,11 @@ ENT.TrafficLightModels[5] = {
 				["kron"] = {
 					{"models/signals_msa/tunnels/kron.mdl", Vector(0,0,0),1,right = true, short = true},
 					{"models/signals_msa/tunnels/kron_mirror.mdl", Vector(0,0,0),1,left = true, short = true},
+					{"models/signals_msa/tunnels/kron_l.mdl", Vector(0,0,0),1,right = true, long = true},
+					{"models/signals_msa/tunnels/kron_l_mirror.mdl", Vector(0,0,0),1,left = true, long = true},
 				},
-				["cap"]	= {
-					{"models/signals_msa/tunnels/cap.mdl",Vector(0,0,0)},
-				},	
 			}},
-	X	= { Vector(0,0,46), "models/signals_msa/tunnels/light_1_2.mdl", {
+	X	= { Vector(0,0,46), "models/signals_msa/tunnels/light_1.mdl", {
 			[0] = Vector(7.22,-29.56,12.93),---27.54
 			["glass"]	= {
 				{"models/signals_msa/tunnels/zag_newt.mdl",Vector(0,0,0)},
@@ -447,16 +443,17 @@ ENT.TrafficLightModels[5] = {
 			["kron"] = {
 					{"models/signals_msa/tunnels/kron.mdl", Vector(0,0,0),1,right = true, short = true},
 					{"models/signals_msa/tunnels/kron_mirror.mdl", Vector(0,0,0),1,left = true, short = true},
-			},	
+					{"models/signals_msa/tunnels/kron_l.mdl", Vector(0,0,0),1,right = true, long = true},
+					{"models/signals_msa/tunnels/kron_l_mirror.mdl", Vector(0,0,0),1,left = true, long = true},
+			},
 		}
 	},
 	M = { Vector(0,0,24.5), "models/signals_msa/tunnels/path_ind.mdl", {
 		["kron"] = {
-			{"models/signals_msa/tunnels/kron.mdl", Vector(0,0,0),1,right = true, short = true},
-			{"models/signals_msa/tunnels/kron_mirror.mdl", Vector(0,0,0),1,left = true, short = true},
-		},
-		["cap"]	= {
-					{"models/signals_msa/tunnels/cap.mdl",Vector(0,0,0)},
+					{"models/signals_msa/tunnels/kron.mdl", Vector(0,0,0),1,right = true, short = true},
+					{"models/signals_msa/tunnels/kron_mirror.mdl", Vector(0,0,0),1,left = true, short = true},
+					{"models/signals_msa/tunnels/kron_l.mdl", Vector(0,0,0),1,right = true, long = true},
+					{"models/signals_msa/tunnels/kron_l_mirror.mdl", Vector(0,0,0),1,left = true, long = true},
 		},
 	}, Vector(1.85, 2.7, 9.5), 0.525, 0.525, 0.125},
 	M_double = { Vector(0,0,24.5), "models/signals_msa/tunnels/path_ind_double.mdl", {}, Vector(13.1,2, 19.5), 1.75, 2.05, 4},
@@ -541,14 +538,14 @@ for i = 0,(#ENT.TrafficLightModels) do
 			"models/metrostroi/signals/mus/light_lampindicator.mdl",
 			"models/metrostroi/signals/mus/light_lampindicator2.mdl",
 			"models/metrostroi/signals/mus/light_lampindicator3.mdl",
-			"models/metrostroi/signals/mus/light_lampindicator4.mdl",
-			"models/metrostroi/signals/mus/light_lampin2dicator5.mdl",
+			"models/signals_msa/tunnels/old/path_ind_kgu.mdl",
+			"models/metrostroi_train/81-717/buttons_pam/pam_0.mdl",
 			numb = "models/signals/msa/old_signals/old_ind/light_lampinsdicator_numb.mdl",
 			lamp = "models/signals/msa/old_signals/old_ind/light_lampindicator_lamp.mdl",
 		},
 		Vector(7.9), -- Indicator model offset if left
 		Vector(0), -- Indicator model offset
-		Vector(8), -- Sep (on short kron) Indicator model offset
+		Vector(2), -- Sep (on short kron) Indicator model offset
 		Vector(-12,0,0), -- Sep (on short kron) Indicator model offset if left
 		Vector(3,0,3), -- Arrow offset
 		Vector(20,0,-12), -- Arrow offset if left
