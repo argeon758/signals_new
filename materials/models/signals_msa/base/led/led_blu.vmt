@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/signals_msa/base/led/led_blu"
+	"$selfillum" 1
+}
